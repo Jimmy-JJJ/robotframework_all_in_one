@@ -1,176 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.8.2 on darwin)" generated="20230314 11:20:08.639" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.8.2 on darwin)" generated="20230314 11:33:48.733" rpa="false" schemaversion="3">
 <suite id="s1" name="Robotframework All In One" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one">
 <suite id="s1-s1" name="Test" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test">
 <suite id="s1-s1-s1" name="Selenium Library" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test/selenium_library">
-<suite id="s1-s1-s1-s1" name="Test Youtube Search" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test/selenium_library/test_youtube_search.robot">
-<test id="s1-s1-s1-s1-t1" name="Search &amp; Play 1 - Pete Doherty Royal Albert Hall" line="16">
+<suite id="s1-s1-s1-s1" name="Test Onet Mail" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test/selenium_library/test_onet_mail.robot">
+<test id="s1-s1-s1-s1-t1" name="Open Mailbox Panel - xFail Case - Unsuccessful Login" line="14">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>${PORTAL_URL}</arg>
+<arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230314 11:20:08.899" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20230314 11:20:08.898" endtime="20230314 11:20:15.166"/>
+<msg timestamp="20230314 11:33:49.088" level="INFO">Opening browser 'chrome' to base url 'https://www.onet.pl'.</msg>
+<status status="PASS" starttime="20230314 11:33:49.088" endtime="20230314 11:33:54.353"/>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230314 11:20:15.167" endtime="20230314 11:20:15.190"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20230314 11:20:15.191" endtime="20230314 11:20:15.911"/>
+<status status="PASS" starttime="20230314 11:33:54.354" endtime="20230314 11:33:54.358"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<arg>class:cmp-intro_rejectAll</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:15.912" level="INFO">Clicking element 'css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button'.</msg>
-<status status="PASS" starttime="20230314 11:20:15.911" endtime="20230314 11:20:15.998"/>
+<msg timestamp="20230314 11:33:54.360" level="INFO">Clicking element 'class:cmp-intro_rejectAll'.</msg>
+<status status="PASS" starttime="20230314 11:33:54.358" endtime="20230314 11:33:54.787"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20230314 11:20:15.998" endtime="20230314 11:20:16.662"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:cmp-details_save</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:33:54.788" level="INFO">Clicking element 'class:cmp-details_save'.</msg>
+<status status="PASS" starttime="20230314 11:33:54.788" endtime="20230314 11:33:55.758"/>
 </kw>
-<kw name="Wait For Element To Be Interactable">
-<arg>tag:input</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230314 11:20:16.664" endtime="20230314 11:20:16.688"/>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{ICONS}</var>
+<arg>class:MenuIcon_icon__ac4PH</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230314 11:33:55.784" level="INFO">@{ICONS} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="a64e6827bcb98950a598d099fd509cc1", element="5c0bc529-3ea0-4621-b147-274167d12154")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20230314 11:33:55.759" endtime="20230314 11:33:55.784"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230314 11:20:16.688" endtime="20230314 11:20:16.720"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ICONS}[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:33:55.785" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a64e6827bcb98950a598d099fd509cc1", element="38c96ca2-ce42-491e-af4a-225bd981ac4c")&gt;'.</msg>
+<status status="PASS" starttime="20230314 11:33:55.784" endtime="20230314 11:33:58.714"/>
 </kw>
-<status status="PASS" starttime="20230314 11:20:16.663" endtime="20230314 11:20:16.721"/>
+<kw name="Input Credentials">
+<arg>marian_kowalski123@gmail.com</arg>
+<arg>zosia123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 11:33:58.715" level="INFO">Typing text 'marian_kowalski123@gmail.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20230314 11:33:58.715" endtime="20230314 11:33:59.270"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>tag:input</arg>
-<arg>${SEARCH_PHRASE1}</arg>
+<arg>name:password</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:16.722" level="INFO">Typing text 'Pete Doherty at Royal Albert Hall playlist' into text field 'tag:input'.</msg>
-<status status="PASS" starttime="20230314 11:20:16.721" endtime="20230314 11:20:16.981"/>
+<msg timestamp="20230314 11:33:59.271" level="INFO">Typing text 'zosia123' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230314 11:33:59.270" endtime="20230314 11:33:59.600"/>
+</kw>
+<status status="PASS" starttime="20230314 11:33:58.714" endtime="20230314 11:33:59.600"/>
 </kw>
 <kw name="Submit Form" library="SeleniumLibrary">
 <doc>Submits a form identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:16.983" level="INFO">Submitting form 'None'.</msg>
-<status status="PASS" starttime="20230314 11:20:16.982" endtime="20230314 11:20:18.832"/>
+<msg timestamp="20230314 11:33:59.601" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20230314 11:33:59.600" endtime="20230314 11:33:59.687"/>
+</kw>
+<kw name="Wait And Clear Password And Username" library="Wait And Clear Password And Username">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230314 11:34:00.692" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230314 11:33:59.689" endtime="20230314 11:34:00.693"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>partial link: Pete Doherty</arg>
+<arg>name:email</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:18.833" level="INFO">Clicking element 'partial link: Pete Doherty'.</msg>
-<status status="PASS" starttime="20230314 11:20:18.832" endtime="20230314 11:20:19.622"/>
+<msg timestamp="20230314 11:34:00.694" level="INFO">Clicking element 'name:email'.</msg>
+<status status="PASS" starttime="20230314 11:34:00.693" endtime="20230314 11:34:00.745"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>${EXPECTED_TITLE1}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230314 11:20:19.903" level="INFO">Page title is 'Pete Doherty at Royal Albert Hall playlist - YouTube'.</msg>
-<status status="PASS" starttime="20230314 11:20:19.623" endtime="20230314 11:20:19.903"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230314 11:20:19.904" endtime="20230314 11:20:20.175"/>
-</kw>
-<status status="PASS" starttime="20230314 11:20:08.897" endtime="20230314 11:20:20.176"/>
-</test>
-<test id="s1-s1-s1-s1-t2" name="Search &amp; Play 2 - Brian Eno Spirits Drifting" line="27">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>${PORTAL_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230314 11:20:20.184" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20230314 11:20:20.182" endtime="20230314 11:20:26.448"/>
-</kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<arg>10</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230314 11:20:26.450" endtime="20230314 11:20:26.476"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20230314 11:20:26.477" endtime="20230314 11:20:26.904"/>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230314 11:34:00.745" endtime="20230314 11:34:00.771"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<arg>name:password</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:26.906" level="INFO">Clicking element 'css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button'.</msg>
-<status status="PASS" starttime="20230314 11:20:26.905" endtime="20230314 11:20:26.975"/>
+<msg timestamp="20230314 11:34:00.772" level="INFO">Clicking element 'name:password'.</msg>
+<status status="PASS" starttime="20230314 11:34:00.771" endtime="20230314 11:34:00.814"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20230314 11:20:26.976" endtime="20230314 11:20:27.513"/>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230314 11:34:00.814" endtime="20230314 11:34:00.844"/>
 </kw>
-<kw name="Wait For Element To Be Interactable">
-<arg>tag:input</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230314 11:20:27.515" endtime="20230314 11:20:27.546"/>
+<status status="PASS" starttime="20230314 11:33:59.688" endtime="20230314 11:34:00.845"/>
 </kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${locator}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230314 11:20:27.547" endtime="20230314 11:20:27.579"/>
-</kw>
-<status status="PASS" starttime="20230314 11:20:27.513" endtime="20230314 11:20:27.579"/>
+<kw name="Input Credentials">
+<arg>staś_kowalski123@gmail.com</arg>
+<arg>BarcaRządzi</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:00.847" level="INFO">Typing text 'staś_kowalski123@gmail.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20230314 11:34:00.846" endtime="20230314 11:34:01.021"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>tag:input</arg>
-<arg>${SEARCH_PHRASE2}</arg>
+<arg>name:password</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:27.581" level="INFO">Typing text 'Eno spirits drifting 2004' into text field 'tag:input'.</msg>
-<status status="PASS" starttime="20230314 11:20:27.580" endtime="20230314 11:20:27.810"/>
+<msg timestamp="20230314 11:34:01.022" level="INFO">Typing text 'BarcaRządzi' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230314 11:34:01.021" endtime="20230314 11:34:01.128"/>
+</kw>
+<status status="PASS" starttime="20230314 11:34:00.845" endtime="20230314 11:34:01.128"/>
 </kw>
 <kw name="Submit Form" library="SeleniumLibrary">
 <doc>Submits a form identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:27.811" level="INFO">Submitting form 'None'.</msg>
-<status status="PASS" starttime="20230314 11:20:27.810" endtime="20230314 11:20:29.596"/>
+<msg timestamp="20230314 11:34:01.129" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20230314 11:34:01.129" endtime="20230314 11:34:01.159"/>
+</kw>
+<kw name="Wait And Clear Password And Username" library="Wait And Clear Password And Username">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230314 11:34:02.161" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230314 11:34:01.159" endtime="20230314 11:34:02.161"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>partial link: Spirits Drifting</arg>
+<arg>name:email</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230314 11:20:29.597" level="INFO">Clicking element 'partial link: Spirits Drifting'.</msg>
-<status status="PASS" starttime="20230314 11:20:29.596" endtime="20230314 11:20:30.457"/>
+<msg timestamp="20230314 11:34:02.162" level="INFO">Clicking element 'name:email'.</msg>
+<status status="PASS" starttime="20230314 11:34:02.161" endtime="20230314 11:34:02.215"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>${EXPECTED_TITLE2}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230314 11:20:30.790" level="INFO">Page title is 'Eno spirits drifting 2004 - YouTube'.</msg>
-<status status="PASS" starttime="20230314 11:20:30.457" endtime="20230314 11:20:30.790"/>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230314 11:34:02.215" endtime="20230314 11:34:02.248"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:02.249" level="INFO">Clicking element 'name:password'.</msg>
+<status status="PASS" starttime="20230314 11:34:02.248" endtime="20230314 11:34:02.307"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230314 11:34:02.307" endtime="20230314 11:34:02.338"/>
+</kw>
+<status status="PASS" starttime="20230314 11:34:01.159" endtime="20230314 11:34:02.339"/>
+</kw>
+<kw name="Input Credentials">
+<arg>robakowski123@gmail.com</arg>
+<arg>jpbpnp</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:02.341" level="INFO">Typing text 'robakowski123@gmail.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20230314 11:34:02.339" endtime="20230314 11:34:02.495"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:02.496" level="INFO">Typing text 'jpbpnp' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230314 11:34:02.495" endtime="20230314 11:34:02.576"/>
+</kw>
+<status status="PASS" starttime="20230314 11:34:02.339" endtime="20230314 11:34:02.576"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:02.576" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20230314 11:34:02.576" endtime="20230314 11:34:02.604"/>
+</kw>
+<kw name="Wait And Clear Password And Username" library="Wait And Clear Password And Username">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230314 11:34:03.607" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230314 11:34:02.606" endtime="20230314 11:34:03.607"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:email</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:03.608" level="INFO">Clicking element 'name:email'.</msg>
+<status status="PASS" starttime="20230314 11:34:03.608" endtime="20230314 11:34:03.647"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230314 11:34:03.648" endtime="20230314 11:34:03.673"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:34:03.674" level="INFO">Clicking element 'name:password'.</msg>
+<status status="PASS" starttime="20230314 11:34:03.673" endtime="20230314 11:34:03.716"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230314 11:34:03.716" endtime="20230314 11:34:03.741"/>
+</kw>
+<status status="PASS" starttime="20230314 11:34:02.605" endtime="20230314 11:34:03.741"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230314 11:20:30.791" endtime="20230314 11:20:31.059"/>
+<status status="PASS" starttime="20230314 11:34:03.741" endtime="20230314 11:34:04.068"/>
 </kw>
-<status status="PASS" starttime="20230314 11:20:20.181" endtime="20230314 11:20:31.059"/>
+<status status="PASS" starttime="20230314 11:33:49.087" endtime="20230314 11:34:04.069"/>
 </test>
-<status status="PASS" starttime="20230314 11:20:08.675" endtime="20230314 11:20:31.061"/>
+<status status="PASS" starttime="20230314 11:33:48.774" endtime="20230314 11:34:04.072"/>
 </suite>
-<status status="PASS" starttime="20230314 11:20:08.673" endtime="20230314 11:20:31.067"/>
+<status status="PASS" starttime="20230314 11:33:48.772" endtime="20230314 11:34:04.076"/>
 </suite>
-<status status="PASS" starttime="20230314 11:20:08.671" endtime="20230314 11:20:31.070"/>
+<status status="PASS" starttime="20230314 11:33:48.770" endtime="20230314 11:34:04.078"/>
 </suite>
-<status status="PASS" starttime="20230314 11:20:08.642" endtime="20230314 11:20:31.073"/>
+<status status="PASS" starttime="20230314 11:33:48.735" endtime="20230314 11:34:04.079"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Robotframework All In One">Robotframework All In One</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test">Robotframework All In One.Test</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Selenium Library">Robotframework All In One.Test.Selenium Library</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Youtube Search">Robotframework All In One.Test.Selenium Library.Test Youtube Search</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robotframework All In One">Robotframework All In One</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Robotframework All In One.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Selenium Library">Robotframework All In One.Test.Selenium Library</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Onet Mail">Robotframework All In One.Test.Selenium Library.Test Onet Mail</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230314 11:33:49.083" level="ERROR">Error in file '/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test/selenium_library/test_onet_mail.robot' on line 3: Importing library 'ExtendedSelenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library.keywords'
+Traceback (most recent call last):
+  File "/Users/jakubbrzezny/.local/share/virtualenvs/robotframework_all_in_one-7HkVH2Iy/lib/python3.8/site-packages/ExtendedSelenium2Library/__init__.py", line 27, in &lt;module&gt;
+    from ExtendedSelenium2Library.keywords import ExtendedElementKeywords
+  File "/Users/jakubbrzezny/.local/share/virtualenvs/robotframework_all_in_one-7HkVH2Iy/lib/python3.8/site-packages/ExtendedSelenium2Library/keywords/__init__.py", line 24, in &lt;module&gt;
+    from ExtendedSelenium2Library.keywords.extendedelement import ExtendedElementKeywords
+  File "/Users/jakubbrzezny/.local/share/virtualenvs/robotframework_all_in_one-7HkVH2Iy/lib/python3.8/site-packages/ExtendedSelenium2Library/keywords/extendedelement.py", line 27, in &lt;module&gt;
+    from Selenium2Library.keywords import _ElementKeywords
+PYTHONPATH:
+  /Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one
+  /Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python38.zip
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/lib-dynload
+  /Users/jakubbrzezny/.local/share/virtualenvs/robotframework_all_in_one-7HkVH2Iy/lib/python3.8/site-packages</msg>
 </errors>
 </robot>
