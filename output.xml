@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on darwin)" generated="20230314 11:20:08.639" rpa="false" schemaversion="3">
+<suite id="s1" name="Robotframework All In One" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one">
+<suite id="s1-s1" name="Test" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test">
+<suite id="s1-s1-s1" name="Selenium Library" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test/selenium_library">
+<suite id="s1-s1-s1-s1" name="Test Youtube Search" source="/Users/jakubbrzezny/Documents/CODER/BUILDING/MY_APPS/robotframework_all_in_one/test/selenium_library/test_youtube_search.robot">
+<test id="s1-s1-s1-s1-t1" name="Search &amp; Play 1 - Pete Doherty Royal Albert Hall" line="16">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${PORTAL_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230314 11:20:08.899" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230314 11:20:08.898" endtime="20230314 11:20:15.166"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230314 11:20:15.167" endtime="20230314 11:20:15.190"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230314 11:20:15.191" endtime="20230314 11:20:15.911"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:15.912" level="INFO">Clicking element 'css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button'.</msg>
+<status status="PASS" starttime="20230314 11:20:15.911" endtime="20230314 11:20:15.998"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230314 11:20:15.998" endtime="20230314 11:20:16.662"/>
+</kw>
+<kw name="Wait For Element To Be Interactable">
+<arg>tag:input</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230314 11:20:16.664" endtime="20230314 11:20:16.688"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230314 11:20:16.688" endtime="20230314 11:20:16.720"/>
+</kw>
+<status status="PASS" starttime="20230314 11:20:16.663" endtime="20230314 11:20:16.721"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>tag:input</arg>
+<arg>${SEARCH_PHRASE1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:16.722" level="INFO">Typing text 'Pete Doherty at Royal Albert Hall playlist' into text field 'tag:input'.</msg>
+<status status="PASS" starttime="20230314 11:20:16.721" endtime="20230314 11:20:16.981"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:16.983" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20230314 11:20:16.982" endtime="20230314 11:20:18.832"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>partial link: Pete Doherty</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:18.833" level="INFO">Clicking element 'partial link: Pete Doherty'.</msg>
+<status status="PASS" starttime="20230314 11:20:18.832" endtime="20230314 11:20:19.622"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${EXPECTED_TITLE1}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230314 11:20:19.903" level="INFO">Page title is 'Pete Doherty at Royal Albert Hall playlist - YouTube'.</msg>
+<status status="PASS" starttime="20230314 11:20:19.623" endtime="20230314 11:20:19.903"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230314 11:20:19.904" endtime="20230314 11:20:20.175"/>
+</kw>
+<status status="PASS" starttime="20230314 11:20:08.897" endtime="20230314 11:20:20.176"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Search &amp; Play 2 - Brian Eno Spirits Drifting" line="27">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${PORTAL_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230314 11:20:20.184" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230314 11:20:20.182" endtime="20230314 11:20:26.448"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230314 11:20:26.450" endtime="20230314 11:20:26.476"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230314 11:20:26.477" endtime="20230314 11:20:26.904"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:26.906" level="INFO">Clicking element 'css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button'.</msg>
+<status status="PASS" starttime="20230314 11:20:26.905" endtime="20230314 11:20:26.975"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:#content &gt; div.body.style-scope.ytd-consent-bump-v2-lightbox &gt; div.eom-buttons.style-scope.ytd-consent-bump-v2-lightbox &gt; div:nth-child(1) &gt; ytd-button-renderer:nth-child(1) &gt; yt-button-shape &gt; button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230314 11:20:26.976" endtime="20230314 11:20:27.513"/>
+</kw>
+<kw name="Wait For Element To Be Interactable">
+<arg>tag:input</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230314 11:20:27.515" endtime="20230314 11:20:27.546"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230314 11:20:27.547" endtime="20230314 11:20:27.579"/>
+</kw>
+<status status="PASS" starttime="20230314 11:20:27.513" endtime="20230314 11:20:27.579"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>tag:input</arg>
+<arg>${SEARCH_PHRASE2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:27.581" level="INFO">Typing text 'Eno spirits drifting 2004' into text field 'tag:input'.</msg>
+<status status="PASS" starttime="20230314 11:20:27.580" endtime="20230314 11:20:27.810"/>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:27.811" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20230314 11:20:27.810" endtime="20230314 11:20:29.596"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>partial link: Spirits Drifting</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 11:20:29.597" level="INFO">Clicking element 'partial link: Spirits Drifting'.</msg>
+<status status="PASS" starttime="20230314 11:20:29.596" endtime="20230314 11:20:30.457"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${EXPECTED_TITLE2}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230314 11:20:30.790" level="INFO">Page title is 'Eno spirits drifting 2004 - YouTube'.</msg>
+<status status="PASS" starttime="20230314 11:20:30.457" endtime="20230314 11:20:30.790"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230314 11:20:30.791" endtime="20230314 11:20:31.059"/>
+</kw>
+<status status="PASS" starttime="20230314 11:20:20.181" endtime="20230314 11:20:31.059"/>
+</test>
+<status status="PASS" starttime="20230314 11:20:08.675" endtime="20230314 11:20:31.061"/>
+</suite>
+<status status="PASS" starttime="20230314 11:20:08.673" endtime="20230314 11:20:31.067"/>
+</suite>
+<status status="PASS" starttime="20230314 11:20:08.671" endtime="20230314 11:20:31.070"/>
+</suite>
+<status status="PASS" starttime="20230314 11:20:08.642" endtime="20230314 11:20:31.073"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Robotframework All In One">Robotframework All In One</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test">Robotframework All In One.Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="Selenium Library">Robotframework All In One.Test.Selenium Library</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Youtube Search">Robotframework All In One.Test.Selenium Library.Test Youtube Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
